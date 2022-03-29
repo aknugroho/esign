@@ -7,4 +7,3 @@ Email andi{dot}nugroho{at}uph{dot}edu
 Terms and Conditions For UPH BEA Only
 
 ```
-QR Code: [https://uph.esign.my.id/andi.png]
