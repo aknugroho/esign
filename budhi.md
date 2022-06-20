@@ -4,6 +4,6 @@ Data:
 ```sh
 Name: Ir. Budhi T. Yuwono, MM, M.Pd
 Email: budhi{dot}yuwono{at}uph{dot}edu 
-Terms and Conditions: For | UPH - BEA | Only
+Terms and Conditions: Valid For | UPH - BEASISWA | Only
 
 ```
