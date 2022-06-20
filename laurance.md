@@ -4,8 +4,8 @@
 
 Data:
 ```sh
-Name: Laurance, M.T.
+Name: Laurance, M.T., IPM
 Email: laurance,{dot}fti{at}uph{dot}edu 
-Terms and Conditions: For | UPH - BEA | Only
+Terms and Conditions: Valid For | UPH - BEASISWA | Only
 
 ```
