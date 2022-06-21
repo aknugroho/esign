@@ -4,6 +4,6 @@ Data:
 ```sh
 Name: Sondang Hasugian
 Email: sondang{dot}hasugian{at}uph{dot}edu 
-Terms and Conditions: For | UPH - BEA | Only
+Terms and Conditions: Valid For | UPH - BEASISWA | Only
 
 ```
