@@ -7,8 +7,16 @@
         function codeAddress() {
                let params = new URLSearchParams(location.search);
                 var xxx = params.get('id')
-                alert(xxx);
                 document.getElementById("id").innerHTML = xxx; 
+                
+                const text = '/json.json';
+                const obj = JSON.parse(text);
+                obj.name = new Date(obj.name);
+                obj.date = new Date(obj.date);
+                obj.docnumber = new Date(obj.docnumber);
+                document.getElementById("name").innerHTML = obj.name;
+                document.getElementById("date").innerHTML = obj.date;
+                document.getElementById("docnumber").innerHTML = obj.docnumber;
         }
         window.onload = codeAddress;
         </script>
