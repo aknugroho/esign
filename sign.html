@@ -2,11 +2,13 @@
 <link rel="stylesheet" href="ttd.css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script>
-const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
-document.getElementById("name").innerHTML = obj.name;
-</script>
+<script type="text/javascript">
+  const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
+        function codeAddress() {
+            document.getElementById("name").innerHTML = obj.name;
+        }
+        window.onload = codeAddress;
+        </script>
 
 <!------ Include the above in your HEAD tag ---------->
 
