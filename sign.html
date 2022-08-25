@@ -3,9 +3,18 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
-  const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
         function codeAddress() {
-            document.getElementById("name").innerHTML = obj.name;
+            var data = {
+  name: Andi,
+  date: 2 Maret 2022
+};
+var inputs = Array.prototype.slice.call(document.querySelectorAll('form input'));
+
+Object.keys(data).map(function (dataItem) {
+  inputs.map(function (inputItem) {
+    return (inputItem.name === dataItem) ? (inputItem.value = data[dataItem]) : false;
+  });
+});
         }
         window.onload = codeAddress;
         </script>
