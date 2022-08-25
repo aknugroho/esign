@@ -5,10 +5,8 @@
 <script type="text/javascript">
         
         function codeAddress() {
-                var url_string = window.location;
-                var url = new URL(url_string);
-                var id = url.searchParams.get("id");
-                document.getElementById("id").value = id;
+               let params = new URLSearchParams(location.search);
+                document.getElementById("id").value = params.get('id');
         }
         window.onload = codeAddress;
         </script>
