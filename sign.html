@@ -6,7 +6,9 @@
         
         function codeAddress() {
                let params = new URLSearchParams(location.search);
-                document.getElementById("id").value = params.get('id');
+                var xxx = params.get('id')
+                alert(xxx);
+                document.getElementById("id").value = xxx;
         }
         window.onload = codeAddress;
         </script>
