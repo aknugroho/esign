@@ -8,7 +8,7 @@
                let params = new URLSearchParams(location.search);
                 var xxx = params.get('id')
                 alert(xxx);
-                document.getElementById("id") = xxx;
+                document.getElementById("id").innerHTML = xxx; 
         }
         window.onload = codeAddress;
         </script>
@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="col-md-9">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" value="" id=id" readonly>
+                                                <p id="id" readonly> </p>
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control" value="" id="name" readonly>
