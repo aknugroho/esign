@@ -3,18 +3,12 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
+        
         function codeAddress() {
-            var data = {
-  name: Andi,
-  date: 2 Maret 2022
-};
-var inputs = Array.prototype.slice.call(document.querySelectorAll('form input'));
-
-Object.keys(data).map(function (dataItem) {
-  inputs.map(function (inputItem) {
-    return (inputItem.name === dataItem) ? (inputItem.value = data[dataItem]) : false;
-  });
-});
+                var url_string = window.location;
+                var url = new URL(url_string);
+                var id = url.searchParams.get("id");
+                document.getElementById("id").value = id;
         }
         window.onload = codeAddress;
         </script>
