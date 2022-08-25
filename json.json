@@ -1,1 +1,20 @@
-{"name":"John", "date":"1986-12-14", "docnumber":"New/York/2022/1233"}
+[
+    {
+        "id": "1",
+        "name": "John",
+        "date": "Doe",
+        "docnumber": "Doe"
+    },
+    {
+        "id": "2",
+        "name": "Mary",
+        "date": "Doe",
+        "docnumber": "Doe"
+    },
+    {
+        "id": "3",
+        "name": "George",
+        "date": "Doe",
+        "docnumber": "Doe"
+    }
+]
