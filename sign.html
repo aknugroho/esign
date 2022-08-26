@@ -7,10 +7,10 @@
         function codeAddress() {
                 let params = new URLSearchParams(location.search);
                 var id = params.get('id');
-                let text = 'https://uph.esign.my.id/data.json';
-                const obj = JSON.parse(text);
+                var json = 'https://uph.esign.my.id/data.json';
+                var arr = JSON.parse(json);
               document.getElementById("id").innerHTML = id; 
-              document.getElementById("name").innerHTML = obj.data.name;
+              document.getElementById("name").innerHTML = arr.json[0].name;
               document.getElementById("date").innerHTML = obj.data.date;
               document.getElementById("docnumber").innerHTML = obj.data.docnumber;
         }
