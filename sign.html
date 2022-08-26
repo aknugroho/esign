@@ -9,14 +9,14 @@
                 var xxx = params.get('id')
                 document.getElementById("id").innerHTML = xxx; 
                 
-                const text = '/json.json';
-                const obj = JSON.parse(text);
-                obj.name = new Date(obj.name);
-                obj.date = new Date(obj.date);
-                obj.docnumber = new Date(obj.docnumber);
-                document.getElementById("name").innerHTML = obj.name;
-                document.getElementById("date").innerHTML = obj.date;
-                document.getElementById("docnumber").innerHTML = obj.docnumber;
+               fetch('/data.json')
+               .then(res => res.json())
+               .then((res) => {
+              const data = res.data;
+              document.getElementById("name").innerHTML = data.name;
+              document.getElementById("date").innerHTML = data.date;
+              document.getElementById("docnumber").innerHTML = data.docnumber;
+});
         }
         window.onload = codeAddress;
         </script>
