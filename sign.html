@@ -6,13 +6,14 @@
         
         function codeAddress() {
                 let params = new URLSearchParams(location.search);
-                var id = params.get('id');
-                var json = 'https://uph.esign.my.id/data.json';
-                var arr = JSON.parse(json);
-              document.getElementById("id").innerHTML = id; 
-              document.getElementById("name").innerHTML = arr.json[0].name;
-              document.getElementById("date").innerHTML = obj.data.date;
-              document.getElementById("docnumber").innerHTML = obj.data.docnumber;
+                var xxx = params.get('id');
+                jsondata = 'https://uph.esign.my.id/data.json';
+                var arr = JSON.parse(jsondata);
+                alert(arr[1].name);
+              document.getElementById("id").innerHTML = xxx; 
+              document.getElementById("name").innerHTML = arr[1].name;
+              document.getElementById("date").innerHTML = arr[1].date;
+              document.getElementById("docnumber").innerHTML = arr[1].docnumber;
         }
         window.onload = codeAddress;
         </script>
