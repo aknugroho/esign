@@ -5,20 +5,14 @@
 <script type="text/javascript">
         
         function codeAddress() {
-                return document.getElementById(id);
-              }
                 let params = new URLSearchParams(location.search);
-                var xxx = params.get('id')
-                document.getElementById("id").innerHTML = xxx; 
-                
-               fetch('https://uph.esign.my.id/data.json')
-               .then(res => res.json())
-               .then((res) => {
-              const data = res.data;
-              document.getElementById("name").innerHTML = data.name;
-              document.getElementById("date").innerHTML = data.date;
-              document.getElementById("docnumber").innerHTML = data.docnumber;
-});
+                var id = params.get('id');
+                let text = 'https://uph.esign.my.id/data.json';
+                const obj = JSON.parse(text);
+              document.getElementById("id").innerHTML = id; 
+              document.getElementById("name").innerHTML = obj.data.name;
+              document.getElementById("date").innerHTML = obj.data.date;
+              document.getElementById("docnumber").innerHTML = obj.data.docnumber;
         }
         window.onload = codeAddress;
         </script>
