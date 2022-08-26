@@ -5,11 +5,13 @@
 <script type="text/javascript">
         
         function codeAddress() {
-               let params = new URLSearchParams(location.search);
+                return document.getElementById(id);
+              }
+                let params = new URLSearchParams(location.search);
                 var xxx = params.get('id')
                 document.getElementById("id").innerHTML = xxx; 
                 
-               fetch('/data.json')
+               fetch('https://uph.esign.my.id/data.json')
                .then(res => res.json())
                .then((res) => {
               const data = res.data;
