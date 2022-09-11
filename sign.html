@@ -5,22 +5,32 @@
 <script type="text/javascript">
         
         
-function getParameterByName(name, url = window.location.href) {
-    name = name.replace(/[\[\]]/g, '\\$&');
-    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+
+
+
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+function load
+{
+
+
                 jsondata = 'https://uph.esign.my.id/json.json';
                 var arr = JSON.parse(jsondata);
-                var id = getParameterByName('id');
+                var id = getQueryVariable('id');
               document.getElementById("id").innerHTML = id; 
               document.getElementById("name").innerHTML = arr[1].name;
               document.getElementById("date").innerHTML = arr[1].date;
               document.getElementById("docnumber").innerHTML = arr[1].docnumber;
         }
-        window.onload = getParameterByName;
+        window.onload = load;
         </script>
 
 <!------ Include the above in your HEAD tag ---------->
