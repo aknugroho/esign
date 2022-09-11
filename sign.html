@@ -8,15 +8,12 @@
 
 
 
-function getQueryVariable(variable)
-{
-       var query = window.location.search.substring(1);
-       var vars = query.split("&");
-       for (var i=0;i<vars.length;i++) {
-               var pair = vars[i].split("=");
-               if(pair[0] == variable){return pair[1];}
-       }
-       return(false);
+function getURIParameter(param, asArray) {
+    return document.location.search.substring(1).split('&').reduce(function(p,c) {
+        var parts = c.split('=', 2).map(function(param) { return decodeURIComponent(param); });
+        if(parts.length == 0 || parts[0] != param) return (p instanceof Array) && !asArray ? null : p;
+        return asArray ? p.concat(parts.concat(true)[1]) : parts.concat(true)[1];
+    }, []);
 }
 function load() 
 {
@@ -30,7 +27,7 @@ function load()
         }
 
         function codeAddress() {
-            document.getElementById("id").innerHTML = getQueryVariable("id"); 
+            document.getElementById("id").innerHTML = getURIParameter("id"); 
             alert('tes');
         }
         window.onload = codeAddress;
