@@ -18,7 +18,7 @@ function getQueryVariable(variable)
        }
        return(false);
 }
-function load () 
+function load() 
 {
               jsondata = 'https://uph.esign.my.id/json.json';
               var arr = JSON.parse(jsondata);
@@ -28,7 +28,11 @@ function load ()
               document.getElementById("date").innerHTML = arr[1].date;
               document.getElementById("docnumber").innerHTML = arr[1].docnumber;
         }
-        window.onload = load;
+
+        function codeAddress() {
+            alert('ok');
+        }
+        window.onload = codeAddress;
         </script>
 
 <!------ Include the above in your HEAD tag ---------->
