@@ -5,14 +5,18 @@
 <script type="text/javascript">
         
         
-$.urlParam = function (name) {
-    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.search);
-    return (results !== null) ? results[1] || 0 : false;
+function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
         function data() {
                 jsondata = 'https://uph.esign.my.id/json.json';
                 var arr = JSON.parse(jsondata);
-                var id = $.urlParam('id');
+                var id = getParameterByName('id');
               document.getElementById("id").innerHTML = id; 
               document.getElementById("name").innerHTML = arr[1].name;
               document.getElementById("date").innerHTML = arr[1].date;
