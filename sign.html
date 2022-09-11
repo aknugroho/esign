@@ -12,8 +12,6 @@ function getParameterByName(name, url = window.location.href) {
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
-        function data() {
                 jsondata = 'https://uph.esign.my.id/json.json';
                 var arr = JSON.parse(jsondata);
                 var id = getParameterByName('id');
@@ -22,7 +20,7 @@ function getParameterByName(name, url = window.location.href) {
               document.getElementById("date").innerHTML = arr[1].date;
               document.getElementById("docnumber").innerHTML = arr[1].docnumber;
         }
-        window.onload = data;
+        window.onload = getParameterByName;
         </script>
 
 <!------ Include the above in your HEAD tag ---------->
