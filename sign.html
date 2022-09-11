@@ -4,19 +4,22 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
         
-        function codeAddress() {
-                var url_string = window.location;
-                var url = new URL(url_string);
-                var tvid = url.searchParams.get("id");
+        function $_GET(q,s) {
+    s = (s) ? s : window.location.search;
+    var re = new RegExp('&amp;'+q+'=([^&amp;]*)','i');
+    return (s=s.replace(/^\?/,'&amp;').match(re)) ?s=s[1] :s='';
+}
+
+        function data() {
                 jsondata = 'https://uph.esign.my.id/json.json';
                 var arr = JSON.parse(jsondata);
-              
-              document.getElementById("id").innerHTML = tvid; 
+                var id = $_GET('id');
+              document.getElementById("id").innerHTML = id; 
               document.getElementById("name").innerHTML = arr[1].name;
               document.getElementById("date").innerHTML = arr[1].date;
               document.getElementById("docnumber").innerHTML = arr[1].docnumber;
         }
-        window.onload = codeAddress;
+        window.onload = data;
         </script>
 
 <!------ Include the above in your HEAD tag ---------->
