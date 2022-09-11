@@ -4,16 +4,15 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
         
-        function $_GET(q,s) {
-    s = (s) ? s : window.location.search;
-    var re = new RegExp('&amp;'+q+'=([^&amp;]*)','i');
-    return (s=s.replace(/^\?/,'&amp;').match(re)) ?s=s[1] :s='';
+        
+$.urlParam = function (name) {
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.search);
+    return (results !== null) ? results[1] || 0 : false;
 }
-
         function data() {
                 jsondata = 'https://uph.esign.my.id/json.json';
                 var arr = JSON.parse(jsondata);
-                var id = $_GET('id');
+                var id = $.urlParam('id');
               document.getElementById("id").innerHTML = id; 
               document.getElementById("name").innerHTML = arr[1].name;
               document.getElementById("date").innerHTML = arr[1].date;
