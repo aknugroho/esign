@@ -20,11 +20,9 @@ function getQueryVariable(variable)
 }
 function load
 {
-
-
-                jsondata = 'https://uph.esign.my.id/json.json';
-                var arr = JSON.parse(jsondata);
-                var id = getQueryVariable('id');
+              jsondata = 'https://uph.esign.my.id/json.json';
+              var arr = JSON.parse(jsondata);
+              var id = getQueryVariable("id");
               document.getElementById("id").innerHTML = id; 
               document.getElementById("name").innerHTML = arr[1].name;
               document.getElementById("date").innerHTML = arr[1].date;
