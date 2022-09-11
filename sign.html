@@ -5,12 +5,13 @@
 <script type="text/javascript">
         
         function codeAddress() {
-                let params = new URLSearchParams(location.search);
-                var xxx = params.get('id');
-                jsondata = 'https://uph.esign.my.id/data.json';
+                var url_string = window.location;
+                var url = new URL(url_string);
+                var tvid = url.searchParams.get("id");
+                jsondata = 'https://uph.esign.my.id/json.json';
                 var arr = JSON.parse(jsondata);
-                alert(arr[1].name);
-              document.getElementById("id").innerHTML = xxx; 
+              
+              document.getElementById("id").innerHTML = tvid; 
               document.getElementById("name").innerHTML = arr[1].name;
               document.getElementById("date").innerHTML = arr[1].date;
               document.getElementById("docnumber").innerHTML = arr[1].docnumber;
