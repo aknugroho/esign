@@ -3,16 +3,24 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
-   $.getJSON( "https://uph.esign.my.id/esign.json", function() {
-    var idType = getUrlVars()["id"];
-    $.each(json.esign.person, function(i, v) {
+  $(function() {
+      var idType = getUrlVars()["id"];
+		myURL =	"https://uph.esign.my.id/esign.json";
+		$.getJSON(myURL, function(data){
+			$.each(data.esign.person, function(i, v) {
         if (v.id == idType) {
-            document.getElementById("name").value = v.name;
+            alert(v.id);
+           document.getElementById("name").value = v.name;
             document.getElementById("date").value = v.date;
             document.getElementById("docnumber").value = v.docnumber;
             return;
         }
     });
+		}).fail(function() {
+			alert( "Error in getting result." );
+		});
+		return false;
+	});
 });
 </script>
 
