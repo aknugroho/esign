@@ -3,11 +3,31 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
-        
-        
+   $(function() {
+    var json = {
+        "people": {
+            "person": [{
+                "name": "Peter",
+                "id": 43,
+                "sex": "male"},
+            {
+                "name": "Zara",
+                "id": 65,
+                "sex": "female"}]
+        }
+    };
+    $.each(json.people.person, function(i, v) {
+        if (v.id == 43) {
+            alert(v.name);
+            document.getElementById("name").value = v.name;
+            return;
+        }
+    });
+});
+</script>
 
-
-
+<script type="text/javascript">
+    
 function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
@@ -16,40 +36,10 @@ function getUrlVars() {
     });
     return vars;
   }
-function load() 
-{
-              jsondata = 'https://uph.esign.my.id/json.json';
-              var arr = JSON.parse(jsondata);
-              var id = getQueryVariable("id");
-              document.getElementById("id").innerHTML = id; 
-              document.getElementById("name").innerHTML = arr[1].name;
-              document.getElementById("date").innerHTML = arr[1].date;
-              document.getElementById("docnumber").innerHTML = arr[1].docnumber;
-        }
 
         function codeAddress() {
            var idType = getUrlVars()["id"];
            document.getElementById("id").value = idType;
-           
-    var json = {
-        "esign": {
-            "data": [{
-                "name": "Peter",
-                "id": 43,
-                "docnumber": "male"},
-            {
-                "name": "Zara",
-                "id": 65,
-                "docnumber": "female"}]
-        }
-    };
-    $.each(json.people.person, function(i, v) {
-    if (v.name == idType) {
-        alert(v.name);
-            document.getElementById("name").value = v.name;
-        return false; // stops the loop
-    }
-   });
 
            document.getElementById("name").value = dataparse.data[1].name;
            document.getElementById("date").value = dataparse.data[1].date;
@@ -58,10 +48,6 @@ function load()
         }
         window.onload = codeAddress;
         </script>
-
-
-
-
 
 <!------ Include the above in your HEAD tag ---------->
 
