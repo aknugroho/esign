@@ -5,9 +5,9 @@
 <script type="text/javascript">
 $(document).ready(function () {
                 var idType = getUrlVars()["id"];
-		myURL =	"https://uph.esign.my.id/esign.json";
+		myURL =	"https://uph.esign.my.id/json.json";
 		$.getJSON(myURL, function(data){
-			$.each(data.esign.person, function(i, v) {
+			$.each(data.esign, function(i, v) {
         if (v.id == idType) {
             document.getElementById("id").value = v.id;
             document.getElementById("name").value = v.name;
