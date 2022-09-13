@@ -3,14 +3,15 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
-  $(document).ready(function () {
-      var idType = getUrlVars()["id"];
+  <script>
+$(document).ready(function () {
+
 		myURL =	"https://uph.esign.my.id/esign.json";
 		$.getJSON(myURL, function(data){
 			$.each(data.esign.person, function(i, v) {
-        if (v.id == idType) {
-            alert(v.id);
-           document.getElementById("name").value = v.name;
+        if (v.id == 43) {
+            document.getElementById("id").value = idType;
+            document.getElementById("name").value = v.name;
             document.getElementById("date").value = v.date;
             document.getElementById("docnumber").value = v.docnumber;
             return;
@@ -21,7 +22,8 @@
 		});
 		return false;
 	});
-});
+
+</script>
 </script>
 
 <script type="text/javascript">
