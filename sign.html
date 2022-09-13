@@ -4,22 +4,26 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
    $(function() {
+    var idType = getUrlVars()["id"];
     var json = {
         "people": {
             "person": [{
                 "name": "Peter",
+                "date":"22 Maret 2022",
                 "id": 43,
-                "sex": "male"},
+                "docnumber": "male"},
             {
                 "name": "Zara",
+                "date":"22 Desember 2022",
                 "id": 65,
-                "sex": "female"}]
+                "docnumber": "female"}]
         }
     };
     $.each(json.people.person, function(i, v) {
-        if (v.id == 43) {
-            alert(v.name);
+        if (v.id == idType) {
             document.getElementById("name").value = v.name;
+            document.getElementById("date").value = v.date;
+            document.getElementById("docnumber").value = v.docnumber;
             return;
         }
     });
@@ -40,10 +44,6 @@ function getUrlVars() {
         function codeAddress() {
            var idType = getUrlVars()["id"];
            document.getElementById("id").value = idType;
-
-           document.getElementById("name").value = dataparse.data[1].name;
-           document.getElementById("date").value = dataparse.data[1].date;
-           document.getElementById("docnumber").value = dataparse.data[1].docnumber;
            
         }
         window.onload = codeAddress;
