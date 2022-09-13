@@ -31,11 +31,17 @@ function load()
            var idType = getUrlVars()["id"];
            document.getElementById("id").value = idType;
                 alert('tes6');
-                const jsondata = 'https://uph.esign.my.id/json.json';
+                const jsondata = 
+                      { "data" : [
+  {    "id":1,    "name":"Johnson, Smith, and Jones Co."  },
+  {    "id":2,    "name":"Sam \"Mad Dog\" Smith"  },
+  {    "id":3,    "name":"Barney & Company"  },
+  {    "id":4,    "name":"Johnson's Automotive"  }
+] };
                 const dataparse = JSON.parse(jsondata);
-           document.getElementById("name").value = dataparse[1].name;
-           document.getElementById("date").value = dataparse[1].date;
-           document.getElementById("docnumber").value = dataparse[1].docnumber;
+           document.getElementById("name").value = dataparse.data[1].name;
+           document.getElementById("date").value = dataparse.data[1].date;
+           document.getElementById("docnumber").value = dataparse.data[1].docnumber;
            
         }
         window.onload = codeAddress;
@@ -43,25 +49,7 @@ function load()
 
 
 
-<script>
 
-$('#search').keyup(function() {
-    var searchField = $('#search').val();
-    var myExp = new RegExp(searchField, "i");
-    $.get('json.json', function(data) {
-        var output = '<ul class="searchresults">';
-        $(data).find(searchField).each(function(index, value){
-            var val = value.firstChild.nodeValue;
-            if ((val.search(myExp) != -1)) {
-                output += '<li>' + val + '</li>';
-            }       
-        });
-        output += '</ul>';
-        $('#result').html(output);
-    });  
-});
-
-</script>
 
 <!------ Include the above in your HEAD tag ---------->
 
@@ -79,7 +67,7 @@ $('#search').keyup(function() {
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                 <h3 class="register-heading">E-Sign Data</h3>
                                 <div class="row register-form">
-                                        <input type="search" name="search" id="search">
+                            
                                     <div class="col-md-3">
                                         <div class="form-group">
                                           <p class="form-control" readonly>ID</p>
