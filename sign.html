@@ -30,7 +30,7 @@ function load()
         function codeAddress() {
            var idType = getUrlVars()["id"];
            document.getElementById("id").value = idType;
-                $(function() {
+           
     var json = {
         "esign": {
             "data": [{
@@ -50,7 +50,7 @@ function load()
         return false; // stops the loop
     }
    });
-});
+
            document.getElementById("name").value = dataparse.data[1].name;
            document.getElementById("date").value = dataparse.data[1].date;
            document.getElementById("docnumber").value = dataparse.data[1].docnumber;
