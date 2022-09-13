@@ -30,8 +30,9 @@ function load()
         function codeAddress() {
             var fType = getUrlVars()["id"];
            
-            document.getElementById("id").innerHTML = "fType"; 
-            alert('tes3');
+            document.getElementById ('id')= "fType"; 
+            document.getElementById ("name")= fType;
+            alert('tes4');
         }
         window.onload = codeAddress;
         </script>
@@ -70,7 +71,7 @@ function load()
                                     </div>
                                     <div class="col-md-9">
                                         <div class="form-group">
-                                                <input type="text" class="form-control" value="" id="id" readonly>
+                                                <input type="text" class="form-control" value="" id="id" readonly><p id="myP">This is a p element.</p>
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control" value="" id="name" readonly>
