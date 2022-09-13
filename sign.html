@@ -30,15 +30,27 @@ function load()
         function codeAddress() {
            var idType = getUrlVars()["id"];
            document.getElementById("id").value = idType;
-                alert('tes6');
-                const jsondata = 
-                      { "data" : [
-  {    "id":1,    "name":"Johnson, Smith, and Jones Co."  },
-  {    "id":2,    "name":"Sam \"Mad Dog\" Smith"  },
-  {    "id":3,    "name":"Barney & Company"  },
-  {    "id":4,    "name":"Johnson's Automotive"  }
-] };
-                const dataparse = JSON.parse(jsondata);
+                $(function() {
+    var json = {
+        "esign": {
+            "data": [{
+                "name": "Peter",
+                "id": 43,
+                "docnumber": "male"},
+            {
+                "name": "Zara",
+                "id": 65,
+                "docnumber": "female"}]
+        }
+    };
+    $.each(json.people.person, function(i, v) {
+    if (v.name == idType) {
+        alert(v.name);
+            document.getElementById("name").value = v.name;
+        return false; // stops the loop
+    }
+   });
+});
            document.getElementById("name").value = dataparse.data[1].name;
            document.getElementById("date").value = dataparse.data[1].date;
            document.getElementById("docnumber").value = dataparse.data[1].docnumber;
