@@ -5,12 +5,12 @@
 <script type="text/javascript">
   <script>
 $(document).ready(function () {
-
+                var idType = getUrlVars()["id"];
 		myURL =	"https://uph.esign.my.id/esign.json";
 		$.getJSON(myURL, function(data){
-			$.each(data.esign.person, function(i, v) {
-        if (v.id == 43) {
-            document.getElementById("id").value = idType;
+		  $.each(data.esign.person, function(i, v) {
+            if (v.id == idType) {
+            
             document.getElementById("name").value = v.name;
             document.getElementById("date").value = v.date;
             document.getElementById("docnumber").value = v.docnumber;
