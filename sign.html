@@ -28,11 +28,14 @@ function load()
         }
 
         function codeAddress() {
-            var fType = getUrlVars()["id"];
-           
-           document.getElementById("id").value = "Johnny Bravo"; 
-           document.getElementById("name").value = fType;
-           alert('tes5');
+            jsondata = 'https://uph.esign.my.id/json.json';
+            var dataparse = JSON.parse(jsondata);
+            var idType = getUrlVars()["id"];
+           document.getElementById("id").value = idType; 
+           document.getElementById("name").value = dataparse[1].name;
+           document.getElementById("name").value = dataparse[1].date;
+           document.getElementById("name").value = dataparse[1].docnumber;
+           alert('tes6');
         }
         window.onload = codeAddress;
         </script>
@@ -65,13 +68,13 @@ function load()
                                           <p class="form-control" readonly>Date</p>
                                         </div>
                                         <div class="form-group">
-                                          <p class="form-control" readonly>Doc. Number</p>
+                                          <p class="form-control" readonly>Doc.No</p>
                                         </div>
 
                                     </div>
                                     <div class="col-md-9">
                                         <div class="form-group">
-                                                <input type="text" class="form-control" value="" id="id" readonly><p id="myP">This is a p element.</p>
+                                                <input type="text" class="form-control" value="" id="id" readonly>
                                         </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control" value="" id="name" readonly>
