@@ -28,14 +28,15 @@ function load()
         }
 
         function codeAddress() {
-            jsondata = 'https://uph.esign.my.id/json.json';
-            var dataparse = JSON.parse(jsondata);
-            var idType = getUrlVars()["id"];
-           document.getElementById("id").value = idType; 
+           var idType = getUrlVars()["id"];
+           document.getElementById("id").value = idType;
+                alert('tes6');
+                const jsondata = 'https://uph.esign.my.id/json.json';
+                const dataparse = JSON.parse(jsondata);
            document.getElementById("name").value = dataparse[1].name;
-           document.getElementById("name").value = dataparse[1].date;
-           document.getElementById("name").value = dataparse[1].docnumber;
-           alert('tes6');
+           document.getElementById("date").value = dataparse[1].date;
+           document.getElementById("docnumber").value = dataparse[1].docnumber;
+           
         }
         window.onload = codeAddress;
         </script>
