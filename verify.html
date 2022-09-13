@@ -4,12 +4,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function () {
-
+                var idType = getUrlVars()["id"];
 		myURL =	"https://uph.esign.my.id/esign.json";
 		$.getJSON(myURL, function(data){
 			$.each(data.esign.person, function(i, v) {
-        if (v.id == 43) {
-
+        if (v.id == idType) {
+            document.getElementById("id").value = v.id;
             document.getElementById("name").value = v.name;
             document.getElementById("date").value = v.date;
             document.getElementById("docnumber").value = v.docnumber;
@@ -40,7 +40,7 @@ function getUrlVars() {
            document.getElementById("id").value = idType;
            
         }
-        window.onload = codeAddress;
+        window.onload = codeAddress2;
         </script>
 
 <!------ Include the above in your HEAD tag ---------->
