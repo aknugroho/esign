@@ -1,0 +1,47 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="ttd.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+    
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+    function(m,key,value) {
+      vars[key] = value;
+    });
+    return vars;
+  }
+
+        function codeAddress() {
+           var idType = getUrlVars()["id"];
+           document.getElementById("id").value = idType;
+           
+        }
+        window.onload = codeAddress;
+        </script>
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="/logo.png" alt=""/>
+                        <h3>Welcome</h3>
+                        <p>E-sign UPH Scholarship</p>
+                      
+                    </div>
+                    <div class="col-md-9 register-right">
+           
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">E-Sign</h3>
+                             <p>Admin: andi.nugroho[at]uph.edu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
