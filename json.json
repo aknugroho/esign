@@ -1885,58 +1885,106 @@
             "docnumber": "Term 1223"
         },
         {
-            "id": "1223FH1",
-            "name": "Ir. Budhi T. Yuwono, MM, M.Pd",
+            "id": "1231FH1",
+            "name": "Ir. Budhi T. Yuwono, MM, M.Pd.",
             "date": "31 Mei 2023",
-            "docnumber": "1223/FH/2023"
+            "docnumber": "1231/FH/2023"
         },
         {
-            "id": "1223FEB1",
-            "name": "Ir. Budhi T. Yuwono, MM, M.Pd",
+            "id": "1231FEB1",
+            "name": "Ir. Budhi T. Yuwono, MM, M.Pd.",
             "date": "31 Mei 2023",
-            "docnumber": "1223/FEB/2023"
+            "docnumber": "1231/FEB/2023"
         },
         {
-            "id": "1223FAST1",
-            "name": "Ir. Budhi T. Yuwono, MM, M.Pd",
+            "id": "1231FAST1",
+            "name": "Ir. Budhi T. Yuwono, MM, M.Pd.",
             "date": "31 Mei 2023",
-            "docnumber": "1223/FAST/2023"
+            "docnumber": "1231/FAST/2023"
         },
         {
-            "id": "1223FIS1",
-            "name": "Ir. Budhi T. Yuwono, MM, M.Pd",
+            "id": "1231FIS1",
+            "name": "Ir. Budhi T. Yuwono, MM, M.Pd.",
             "date": "31 Mei 2023",
-            "docnumber": "1223/FIS/2023"
+            "docnumber": "1231/FIS/2023"
         },
         {
-            "id": "1223FPAR1",
-            "name": "Ir. Budhi T. Yuwono, MM, M.Pd",
+            "id": "1231FPAR1",
+            "name": "Ir. Budhi T. Yuwono, MM, M.Pd.",
             "date": "31 Mei 2023",
-            "docnumber": "1223/FPAR/2023"
+            "docnumber": "1231/FPAR/2023"
         },
         {
-            "id": "1223FIKES1",
-            "name": "Ir. Budhi T. Yuwono, MM, M.Pd",
+            "id": "1231FIKES1",
+            "name": "Ir. Budhi T. Yuwono, MM, M.Pd.",
             "date": "31 Mei 2023",
-            "docnumber": "1223/FIKES/2023"
+            "docnumber": "1231/FIKES/2023"
         },
         {
-            "id": "1223FISIP1",
-            "name": "Ir. Budhi T. Yuwono, MM, M.Pd",
+            "id": "1231FISIP1",
+            "name": "Ir. Budhi T. Yuwono, MM, M.Pd.",
             "date": "31 Mei 2023",
-            "docnumber": "1223/FISIP/2023"
+            "docnumber": "1231/FISIP/2023"
         },
         {
-            "id": "1223SOD1",
-            "name": "Ir. Budhi T. Yuwono, MM, M.Pd",
+            "id": "1231SOD1",
+            "name": "Ir. Budhi T. Yuwono, MM, M.Pd.",
             "date": "31 Mei 2023",
-            "docnumber": "1223/SOD/2023"
+            "docnumber": "1231/SOD/2023"
         },
         {
-            "id": "1223FIK1",
-            "name": "Ir. Budhi T. Yuwono, MM, M.Pd",
+            "id": "1231FIK1",
+            "name": "Ir. Budhi T. Yuwono, MM, M.Pd.",
             "date": "4 Agustus 2023",
-            "docnumber": "1223/FIK/2023"
+            "docnumber": "1231/FIK/2023"
+        },
+        {
+            "id": "1231FH2",
+            "name": "Dr. Fajar Sugianto, SH, MH",
+            "date": "10 Agustus 2023",
+            "docnumber": "1231/FH/2023"
+        },
+        {
+            "id": "1231FEB2",
+            "name": "-",
+            "date": "-",
+            "docnumber": "1231/FEB/2023"
+        },
+        {
+            "id": "1231FAST2",
+            "name": "-",
+            "date": "-",
+            "docnumber": "1231/FAST/2023"
+        },
+        {
+            "id": "1231FIS2",
+            "name": "-",
+            "date": "-",
+            "docnumber": "1231/FIS/2023"
+        },
+        {
+            "id": "1231FPAR2",
+            "name": "-",
+            "date": "-",
+            "docnumber": "1231/FPAR/2023"
+        },
+        {
+            "id": "1231FIKES2",
+            "name": "-",
+            "date": "-",
+            "docnumber": "1231/FIKES/2023"
+        },
+        {
+            "id": "1231FISIP2",
+            "name": "-",
+            "date": "-",
+            "docnumber": "1231/FISIP/2023"
+        },
+        {
+            "id": "1231SOD2",
+            "name": "-",
+            "date": "-",
+            "docnumber": "1231/SOD/2023"
         }
     ]
 }
